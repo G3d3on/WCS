@@ -14,7 +14,7 @@
             );
         }
         catch(PDOException $error) {
-            echo "<mark>", $error->getMessage(),"</mark>";
+            echo "<mark>",$error,"</mark>";
         }
         return $dbh;
     }
@@ -39,7 +39,7 @@
 
     Function countCrew(){
         $dbh = connexion();
-        $stmt = $dbh->prepare ("SELECT COUNT(id) AS nbCrew 
+        $stmt = $dbh->prepare ("SELECT COUNT(id)
                                 FROM crew
                             ");
         $stmt->execute();
