@@ -39,7 +39,7 @@
 
     Function countCrew(){
         $dbh = connexion();
-        $stmt = $dbh->prepare ("SELECT COUNT(id)
+        $stmt = $dbh->prepare ("SELECT COUNT(id) AS nbCrew
                                 FROM crew
                             ");
         $stmt->execute();

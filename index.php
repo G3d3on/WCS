@@ -37,17 +37,17 @@ $nbCrew = countCrew();
             
             <!-- Member list -->
             <h2>Membres de l'équipage</h2>
-            <p>
+            <div>
+                <p id='nbCrew'><?php echo $nbCrew['nbCrew'] ?></p>
                 <?php 
-                    echo "<p id='nbCrew'>".$nbCrew."</p>";
-                    $full ="";
-                    if ($nbCrew == 50) {
+                    $full = "";
+                    if ($nbCrew['nbCrew'] == 50) {
                         $full = "<p id='msg'>Complet</p>";
                     }
 
                     echo $full; 
                 ?>
-            </p>
+            </div>
             <section class="member-list">
                 <div class="member-item">
                     <?php       
