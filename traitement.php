@@ -4,7 +4,7 @@
 
     $nbCrew = countCrew();
 
-    if(isset($_POST['submit'])){
+    if(!empty($_POST['name'])){
         $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_STRING);
         if ($nbCrew['nbCrew'] < 50) {
             if ($name) {
@@ -13,6 +13,5 @@
         }
         
         header("Location: index.php");
-        die();
-    }
+    } else header("Location: index.php");
 ?>
